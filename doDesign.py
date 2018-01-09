@@ -67,8 +67,6 @@ def fixbb(pdb,resfile,output,jobs=1,sfxn = "ref2015",pymol = False):
         # rename pose for pretty output to PyMOL
         testPose.pdb_info().name("%s_%i"%(output,counter))
         packMover.apply(testPose)
-        # Show score
-        scorefxn.show(testPose)
         # output decoy
         jd.output_decoy(testPose)
         
