@@ -17,17 +17,17 @@ def main():
     # initialize argument parser
     parser = argparse.ArgumentParser()
     # input pdb -f
-    parser.add_argument('-f',dest="pdb",help="input PDB file for design")
+    parser.add_argument('-f',dest="pdb",metavar="input.pdb",help="input PDB file for design")
     # input resfile -res
     parser.add_argument('-res',help='resfile to use for design',dest='resfile')
     # output pdb extension -o
-    parser.add_argument('-o',help='output file stem',dest='output')
+    parser.add_argument('-o',help='output file stem (don\'t include the .pdb)',metavar="output",dest='output')
     # number of times you want to perform design -j
-    parser.add_argument('-j',help='number of times to perform design',default=1,dest='jobs',type=int)
+    parser.add_argument('-j',help='number of times to perform design (default: 1)',default=1,dest='jobs',type=int)
     # use PyMOL mover --pymol
-    parser.add_argument("--pymol",help="Outputs structures to PyMOL instance",action="store_true")
+    parser.add_argument("--pymol",help="Outputs structures to PyMOL instance (default: False)",action="store_true")
     # scorefunction choice -sfxn
-    parser.add_argument('-sfxn',help='ScoreFunction to use for design',default="ref2015")
+    parser.add_argument('-sfxn',help='ScoreFunction to use for design (default: ref2015)',default="ref2015")
     # parse the arguments
     args = parser.parse_args()
     # Run Fixbb
