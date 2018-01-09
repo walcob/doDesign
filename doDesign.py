@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from pyrosetta import *
-from rosetta import *
+from pyrosetta.rosetta import *
 #Fixbb imports
 from pyrosetta.rosetta.core.pack.task import *
 from pyrosetta.rosetta.core.pack.task import parse_resfile
